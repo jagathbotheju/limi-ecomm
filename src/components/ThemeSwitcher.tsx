@@ -13,15 +13,20 @@ export function ThemeSwitcher() {
 
   if (!mounted) return null;
 
+  console.log("theme", theme);
+
   return (
     <div>
       {theme === "dark" ? (
         <Sun
           onClick={() => setTheme("light")}
-          className="cursor-pointer text-foreground"
+          className="cursor-pointer text-foreground text-green-600"
         />
       ) : (
-        <Moon onClick={() => setTheme("dark")} className="cursor-pointer" />
+        <Moon
+          onClick={() => setTheme("dark")}
+          className="cursor-pointer text-green-600"
+        />
       )}
     </div>
   );

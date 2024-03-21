@@ -6,7 +6,7 @@ import SmallCards from "@/components/dashboard/SmallCards";
 
 const AdminDashboardPage = () => {
   return (
-    <div className="">
+    <>
       <Heading title="Dashboard Overview" />
 
       <LargeCards />
@@ -15,7 +15,7 @@ const AdminDashboardPage = () => {
 
       {/* recent orders table */}
       <RecentOrdersTable />
-    </div>
+    </>
   );
 };
 

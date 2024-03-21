@@ -23,7 +23,9 @@ const SmallCard = ({ data }: Props) => {
 
   return (
     <Card
-      className={cn("text-slate-50 shadow-md border-none p-4 bg-slate-700")}
+      className={cn(
+        "dark:text-slate-50 shadow-md border-none p-4 dark:bg-slate-700"
+      )}
     >
       <CardContent className="p-0">
         <div className="flex space-x-2 items-center">

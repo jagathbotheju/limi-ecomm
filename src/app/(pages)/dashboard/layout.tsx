@@ -1,5 +1,7 @@
 import DashboardNavbar from "@/components/dashboard/Navbar";
 import Sidebar from "@/components/Sidebar";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -9,13 +11,16 @@ const AdminLayout = ({ children }: Props) => {
   return (
     <div className="flex">
       {/* side bar */}
-      <Sidebar />
+      <DashboardNavbar />
+      {/* <Sidebar showSidebar={showSidebar} /> */}
 
       {/* main body */}
       <div className="w-full">
-        <DashboardNavbar />
-
-        <main className="p-8 bg-slate-900 text-slate-50 min-h-screen mt-16 ml-60">
+        <main
+          className={cn(
+            "p-8 dark:bg-slate-900 dark:text-slate-50 min-h-screen mt-16 flex-grow ml-0 z-0"
+          )}
+        >
           {children}
         </main>
         {/* main */}

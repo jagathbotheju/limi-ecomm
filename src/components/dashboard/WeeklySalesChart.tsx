@@ -13,6 +13,7 @@ import {
 import { Line } from "react-chartjs-2";
 //import {faker }from 'faker';
 import { faker } from "@faker-js/faker";
+import { useMemo } from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -66,20 +67,20 @@ export const data2 = {
 
 const WeeklySalesChart = () => {
   return (
-    <div className="bg-slate-700 p-8 rounded-lg">
+    <div className="dark:bg-slate-700 p-8 rounded-lg shadow-lg">
       <h2 className="text-xl font-bold mb-5">Weekly Sales</h2>
 
       <Tabs defaultValue="sales" className="h-full">
-        <TabsList className="grid w-full grid-cols-2 bg-slate-700 text-slate-300 gap-5">
+        <TabsList className="bg-white grid w-full grid-cols-2 dark:bg-slate-700 text-slate-300 gap-5">
           <TabsTrigger
             value="sales"
-            className="bg-slate-700 border-b-slate-600 border-b-2 data-[state=active]:bg-transparent data-[state=active]:text-orange-600 data-[state=active]:border-b-orange-600"
+            className="dark:bg-slate-700 dark:border-b-slate-600 border-b-2 data-[state=active]:bg-transparent data-[state=active]:text-orange-600 data-[state=active]:border-b-orange-600"
           >
             Sales
           </TabsTrigger>
           <TabsTrigger
             value="orders"
-            className="bg-slate-700 border-b-slate-600 border-b-2 data-[state=active]:bg-transparent data-[state=active]:text-orange-600 data-[state=active]:border-b-orange-600"
+            className="dark:bg-slate-700 dark:border-b-slate-600 border-b-2 data-[state=active]:bg-transparent data-[state=active]:text-orange-600 data-[state=active]:border-b-orange-600"
           >
             Orders
           </TabsTrigger>
