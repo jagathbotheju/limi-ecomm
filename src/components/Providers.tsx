@@ -1,6 +1,6 @@
 "use client";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { Toaster } from "sonner";
+import { Toaster } from "@/components/ui/sonner";
 
 interface Props {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ const Providers = ({ children }: Props) => {
       defaultTheme="light"
       disableTransitionOnChange
     >
-      <Toaster position="bottom-right" richColors />
+      <Toaster />
       {children}
     </NextThemesProvider>
   );

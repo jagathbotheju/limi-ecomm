@@ -2,6 +2,8 @@
 import {
   ArrowRight,
   Boxes,
+  Building2,
+  CircleDollarSign,
   LayoutGrid,
   LayoutGridIcon,
   LayoutList,
@@ -56,6 +58,16 @@ const sidebarLinks = [
     title: "Staff",
     href: "/dashboard/staff",
     icon: <User />,
+  },
+  {
+    title: "Community",
+    href: "/dashboard/community",
+    icon: <Building2 />,
+  },
+  {
+    title: "Wallet",
+    href: "/dashboard/wallet",
+    icon: <CircleDollarSign />,
   },
   {
     title: "Settings",
@@ -118,7 +130,7 @@ const Sidebar = ({ setOpen }: Props) => {
       </Link>
 
       {/* dashboard */}
-      <div className="space-y-3 flex flex-col" onClick={() => setOpen(false)}>
+      <div className="space-y-3 flex flex-col">
         <Link
           href="/dashboard"
           className={cn(
@@ -155,6 +167,7 @@ const Sidebar = ({ setOpen }: Props) => {
               {catalougeLinks.map((link, i) => {
                 return (
                   <Link
+                    onClick={() => setOpen(false)}
                     key={i}
                     href={link.href}
                     className={cn(
