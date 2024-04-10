@@ -1,15 +1,16 @@
+import NewCouponForm from "@/components/coupons/NewCouponForm";
 import NewCategoryForm from "@/components/dashboard/categories/NewCategoryForm";
 import Heading from "@/components/dashboard/Heading";
 
-const NewCategoryPage = () => {
+const NewCouponPage = () => {
   return (
     <div className="flex flex-col container">
-      <Heading title="New Category" />
+      <Heading title="New Coupon" />
       <div className="flex justify-center">
-        <NewCategoryForm />
+        <NewCouponForm />
       </div>
     </div>
   );
 };
 
-export default NewCategoryPage;
+export default NewCouponPage;

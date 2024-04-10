@@ -4,9 +4,9 @@ interface Props {
 
 const Heading = ({ title }: Props) => {
   return (
-    <h2 className="text-2xl font-semibold dark:text-slate-50 dark:bg-slate-600 bg-slate-100 p-10 rounded-md">
-      {title}
-    </h2>
+    <div className="flex dark:text-slate-50 dark:bg-slate-800 bg-slate-100 p-10 rounded-md shadow-md">
+      <h2 className="text-2xl font-semibold ">{title}</h2>
+    </div>
   );
 };
 

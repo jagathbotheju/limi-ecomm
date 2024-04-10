@@ -9,7 +9,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between bg-white dark:bg-slate-800 text-green-600 h-16 px-8 py-4 fixed top-0 right-0 left-0 shadow-lg w-full">
+    <nav className="flex items-center justify-between bg-white dark:bg-slate-800 text-green-600 h-16 px-8 py-4 shadow-lg w-full mb-8">
       {/* sidebar */}
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="flex gap-2 items-center">

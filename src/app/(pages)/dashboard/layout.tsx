@@ -9,22 +9,10 @@ interface Props {
 
 const AdminLayout = ({ children }: Props) => {
   return (
-    <div className="flex">
-      {/* side bar */}
+    <div className="flex min-h-screen flex-col dark:bg-slate-900 dark:text-slate-50">
       <DashboardNavbar />
-      {/* <Sidebar showSidebar={showSidebar} /> */}
 
-      {/* main body */}
-      <div className="w-full">
-        <main
-          className={cn(
-            "p-8 dark:bg-slate-900 dark:text-slate-50 min-h-screen mt-16 flex-grow ml-0 z-0"
-          )}
-        >
-          {children}
-        </main>
-        {/* main */}
-      </div>
+      <main className="grow">{children}</main>
     </div>
   );
 };
